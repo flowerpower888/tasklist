@@ -28,7 +28,7 @@ list.addEventListener('click', function(e) {
     if (e.target.classList.contains('close')) {
       e.target.parentNode.parentNode.removeChild(e.target.parentNode);
     } else if (e.target.classList.contains('list-item')) {
-      e.target.classList.add('crossout');
+      e.target.classList.toggle('crossout');
     };
     storeTasks();
   });
