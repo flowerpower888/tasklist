@@ -1,0 +1,140 @@
+* {
+  font-family: 'Oswald', sans-serif;
+  padding: 0; margin: 0;
+}
+
+html, body {
+  min-height: 100%;
+  width: auto;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+body {
+  /* background: #accdff; */
+  background: linear-gradient(45deg, #FC5C7D, #6A82FB);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+}
+
+
+
+
+
+.wrapper {
+  width: 350px;
+  margin: 10% auto
+}
+
+.todolist {
+  padding: 40px;
+  min-height: 250px;
+  overflow: hidden;
+  background-color: rgb(225, 255, 126, 0.25);
+  border: 2px solid #b179a7;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px -10px rgba(145, 58, 145, 0.77);
+
+}
+
+h1 {
+  text-shadow: 2px 0 0 #b179a7, -2px 0 0 #b179a7, 0 2px 0 #b179a7, 0 -2px 0 #b179a7, 1px 1px #b179a7, -1px -1px 0 #b179a7, 1px -1px 0 #b179a7, -1px 1px 0 #b179a7;
+  color: #f7ff5b;
+  transition: 0.3s;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1:hover {
+  color: #ff55d5;
+  cursor: pointer;
+}
+
+input {
+  border-radius: 10px;
+  width: 80%;
+  padding: 5px;
+  font-size: 15px;
+  background-color: #ede0f4;
+  border: 2px solid rgb(177, 121, 167);
+  text-align: center;
+  margin-bottom: 30px;
+  /* margin-right: 7px; */
+}
+input:focus {
+  outline: none;
+}
+.btn-add {
+  border: 2px solid rgb(177, 121, 167);
+  border-radius: 10px;
+  padding: 5px;
+  width: 12%;
+  background: #f7ff5b;
+  color: #555;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.btn-add:hover {
+  background-color: #c6ee63;
+  cursor: pointer;
+  color: #fff;
+}
+
+.list {
+  box-sizing: border-box;
+  padding-left: 20px;
+  /* padding-right: 20px; */
+  border-radius: 5px;
+  width: 83%;
+  word-wrap: break-word;
+  box-shadow: inset 0px 0px 0px 2px rgba(177, 121, 167, 0.77);
+  background-color: #ede0f4;
+  text-align: left;
+}
+.list li {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right:-20px;
+  font-size: 15px;
+  font-family: Helvetica;
+  /* padding: 0px 15px; */
+  cursor: pointer;
+  color: #ff6e6e;
+  transition: 0.3s;
+}
+
+li:hover {
+  cursor: default;
+}
+
+li:hover .close {
+  color: red;
+}
+
+img {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.crossout {
+  text-decoration: line-through;
+}
+.visible {
+  display: block;
+}
