@@ -1,12 +1,15 @@
 * {
   font-family: 'Oswald', sans-serif;
-  padding: 0; margin: 0;
 }
 
-html, body {
-  min-height: 100%;
-  width: auto;
+body {
+  background: linear-gradient(45deg, #FC5C7D, #6A82FB);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+  height: 100vh;
+  margin: 0;
 }
+
 @keyframes gradient {
   0% {
     background-position: 0 50%;
@@ -19,32 +22,6 @@ html, body {
   100% {
     background-position: 0 50%;
   }
-}
-body {
-  /* background: #accdff; */
-  background: linear-gradient(45deg, #FC5C7D, #6A82FB);
-  background-size: 200% 200%;
-  animation: gradient 10s ease infinite;
-}
-
-
-
-
-
-.wrapper {
-  width: 350px;
-  margin: 10% auto
-}
-
-.todolist {
-  padding: 40px;
-  min-height: 250px;
-  overflow: hidden;
-  background-color: rgb(225, 255, 126, 0.25);
-  border: 2px solid #b179a7;
-  border-radius: 5px;
-  box-shadow: 0px 0px 40px -10px rgba(145, 58, 145, 0.77);
-
 }
 
 h1 {
@@ -60,6 +37,35 @@ h1:hover {
   cursor: pointer;
 }
 
+
+img {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+
+
+.wrapper {
+  position: relative;
+  top: 5em;
+  display: flex;
+  justify-content: center;
+}
+
+.todolist {
+  width: 18em;
+  padding: 40px;
+  min-height: 250px;
+  overflow: hidden;
+  background-color: rgb(225, 255, 126, 0.25);
+  border: 2px solid #b179a7;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px -10px rgba(145, 58, 145, 0.77);
+
+}
+
 input {
   border-radius: 10px;
   width: 80%;
@@ -69,7 +75,6 @@ input {
   border: 2px solid rgb(177, 121, 167);
   text-align: center;
   margin-bottom: 30px;
-  /* margin-right: 7px; */
 }
 input:focus {
   outline: none;
@@ -92,11 +97,11 @@ input:focus {
 }
 
 .list {
+  margin: 0;
   box-sizing: border-box;
-  padding-left: 20px;
-  /* padding-right: 20px; */
+  padding-left: 30px;
   border-radius: 5px;
-  width: 83%;
+  width: 90%;
   word-wrap: break-word;
   box-shadow: inset 0px 0px 0px 2px rgba(177, 121, 167, 0.77);
   background-color: #ede0f4;
@@ -111,7 +116,6 @@ input:focus {
   right:-20px;
   font-size: 15px;
   font-family: Helvetica;
-  /* padding: 0px 15px; */
   cursor: pointer;
   color: #ff6e6e;
   transition: 0.3s;
@@ -125,12 +129,6 @@ li:hover .close {
   color: red;
 }
 
-img {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
 
 .crossout {
   text-decoration: line-through;

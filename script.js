@@ -1,5 +1,5 @@
 const list = document.querySelector('.list'),
-  input = document.querySelector('input');
+      input = document.querySelector('input');
 
 if (localStorage.tasks) {
   list.innerHTML = localStorage.tasks;
@@ -16,16 +16,17 @@ document.querySelector('h1').addEventListener('click', function() {
 
 document.querySelector('form').addEventListener('submit', function(e) {
   e.preventDefault();
-  list.innerHTML += '<li class="list-item">' + input.value + '<span class="close">' + 'x' + '</span>' + '</li>';
+  list.innerHTML += `<li class="list-item">${input.value}<span class="close">x</span></li>`;
   input.value = null;
   storeTasks();
+  input.focus();
 });
 
 //  cross out and remove
 
 list.addEventListener('click', function(e) {
-  if (e.target.classList.contains('close')) {
-    e.target.parentNode.parentNode.removeChild(e.target.parentNode);
+  if (e.target.className == 'close') {
+    e.target.closest('.list-item').remove();
   } else if (e.target.classList.contains('list-item')) {
     e.target.classList.toggle('crossout');
   };
